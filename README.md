@@ -15,12 +15,44 @@ PPMS の ρ-T, Hall 測定を解析及びプロットする
    検索バーに「Python」と入力し、Microsoftが提供するPython拡張機能をインストールします。
 
 ## このリポジトリのクローン
-
+まず, このリポジトリを作成したいディレクトリでターミナルを開きます。
 ターミナルを開き、以下のコマンドを実行してこのリポジトリをクローンします。
 
 ```bash
 git clone https://github.com/Yoshimi-Lab/PPMS-Analysis.git
-cd PPMS-Analysis
 ```
 
-## 必要なパッケージのインストール
+## 仮想環境の構築
+Pythonの仮想環境を作成し、必要なパッケージをインストールします。
+
+VSCode でリポジトリを開き、ターミナルを開いて以下のコマンドを実行します。
+
+リポジトリの開き方
+
+VSCodeを起動し、「ファイル」→「フォルダーを開く」を選択し、クローンしたリポジトリのフォルダを選択します。
+
+VSCode のターミナルで以下のコマンドを実行して仮想環境を作成します。
+
+```bash
+$ ...\PPMS-Analysis > python -m venv venv
+```
+次に、仮想環境をアクティブにします。
+- Windows:
+```bash
+PPMS-Analysis .\venv\Scripts\activate
+```
+- macOS/Linux:
+```bash
+PPMS-Analysis source ./venv/bin/activate
+```
+仮想環境がアクティブになったら、必要なパッケージをインストールします。
+
+```bash
+PPMS-Analysis pip install -r requirements.txt
+```
+
+VSCodeで仮想環境上でPythonを実行するには, .pyファイルでは右下のインタープリターの選択から作成したvenvを選択してください.
+.ipynbファイルでは右上のカーネルの選択から作成したvenvを選択してください.
+
+## 使い方
+`example.ipynb`を開き、セルを順番に実行して解析とプロットの方法を確認してください。
