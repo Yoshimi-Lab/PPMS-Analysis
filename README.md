@@ -25,9 +25,11 @@ git clone https://github.com/Yoshimi-Lab/PPMS-Analysis.git
 ## 仮想環境の構築
 Pythonの仮想環境を作成し、必要なパッケージをインストールします。
 
+### venv を用いる場合
+
 VSCode でリポジトリを開き、ターミナルを開いて以下のコマンドを実行します。
 
-リポジトリの開き方
+#### リポジトリの開き方
 
 VSCodeを起動し、「ファイル」→「フォルダーを開く」を選択し、クローンしたリポジトリのフォルダを選択します。
 
@@ -50,6 +52,14 @@ PPMS-Analysis source ./venv/bin/activate
 ```bash
 PPMS-Analysis pip install -r requirements.txt
 ```
+
+### uv を用いる場合
+`uv`コマンドラインツールを使用して仮想環境を管理する場合
+
+```bash
+$ ...\PPMS-Analysis > uv sync
+```
+## 仮想環境の選択
 
 VSCodeで仮想環境上でPythonを実行するには, .pyファイルでは右下のインタープリターの選択から作成したvenvを選択してください.
 .ipynbファイルでは右上のカーネルの選択から作成したvenvを選択してください.
